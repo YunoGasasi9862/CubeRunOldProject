@@ -23,7 +23,8 @@ public class GroundGenerator : MonoBehaviour
             
             position.z = minDistance;
             GameObject ground = Instantiate(plane, position, plane.transform.rotation);
-            minDistance += 15;
+            minDistance += 10;
+            Destroy(ground, 5f);
             yield return null;
         
 
