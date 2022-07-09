@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
     {
         if(transform.position.z < player.position.z)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, player.position.z); //snaps to players location
+            transform.position = new Vector3(player.position.x, transform.position.y, player.position.z); //snaps to players location
         }
     }
 }

@@ -14,6 +14,18 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Vector3.forward * speed);  //VECTOR 3 FORWARD IS FOR Z DIRECTION, YAHOO!!!
+        rb.AddForce(Vector3.forward * speed );  //VECTOR 3 FORWARD IS FOR Z DIRECTION, YAHOO!!!\\
+        if(Input.GetKey(KeyCode.D))
+        {
+
+            rb.AddForce(Vector3.right * speed);
+
+        }
+        if(Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(Vector3.left * speed);
+
+
+        }
     }
 }
