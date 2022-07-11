@@ -375,7 +375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6258688228214353064, guid: c24534512852800429c4008b1fae588c, type: 3}
       propertyPath: speed
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6258688228214353064, guid: c24534512852800429c4008b1fae588c, type: 3}
       propertyPath: canJump
@@ -384,6 +384,18 @@ PrefabInstance:
     - target: {fileID: 6258688228214353064, guid: c24534512852800429c4008b1fae588c, type: 3}
       propertyPath: jumpforce
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258688228214353064, guid: c24534512852800429c4008b1fae588c, type: 3}
+      propertyPath: jumpheight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258688228214353065, guid: c24534512852800429c4008b1fae588c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 370911dc8a4e3e04bbb4e31d99abedb3, type: 2}
+    - target: {fileID: 6258688228214353065, guid: c24534512852800429c4008b1fae588c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6258688228214353076, guid: c24534512852800429c4008b1fae588c, type: 3}
       propertyPath: m_Name
@@ -403,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6258688228214353079, guid: c24534512852800429c4008b1fae588c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6258688228214353079, guid: c24534512852800429c4008b1fae588c, type: 3}
       propertyPath: m_LocalPosition.z
