@@ -8,7 +8,8 @@ public class PlayerMove : MonoBehaviour
     public float speed = 20f;
     public float jumpforce=10f;
     float gravity = -9.81f;
-    float vector;
+    bool canjump;
+    Vector3 velocity;
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -21,21 +22,30 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetKey(KeyCode.D))
         {
 
-            rb.AddForce(Vector3.right * speed);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
 
         }
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(Vector3.left * speed);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
 
 
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * jumpforce , ForceMode.Impulse); //so it only JUMPS once on IMPULSE!!
-           
+            canjump = true;
         }
-       
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            canjump = false;
+            velocity.y += gravity * Time.deltaTime;
+        }
+        if(canjump)
+        {
+            rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse); //so it only JUMPS once on IMPULSE!!
+
+        }
+
     }
 }
